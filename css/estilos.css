@@ -17,10 +17,11 @@ border:1px solid gray;
 .titulo{
 width: 100%;
 height: 50px;
-padding: 10px;
-background-color: rgba(0,0,0);
+/*padding: 10px;*/
+padding: 52px;
+background-color: rgb(117, 116, 116);
 font-family: 'Dancing Script', cursive;
-color:#fff;
+color:#0c0c0c;
 text-align: center;
 /*aumentar el titulo puede ser h1 pero...*/
 font-size: 25px;/*puede ser 2em*/
@@ -33,7 +34,7 @@ margin:auto; /*quede centrado*/
 }
 /*cuerpo*/
 body{
-background-image: url('../img/fondo-pagina.jpg');
+background-image: url('../img/fondo.jpg');
 background-size: 100% 100%;
 background-attachment: fixed;/*la imagen se quede fija*/
 font-family: 'Chelsea Market', cursive;
@@ -41,9 +42,10 @@ font-family: 'Chelsea Market', cursive;
 /*navegador*/
 nav{
 width: 100%;
-
+position: fixed;
 height: 50px;
-background-color: #DB9F16;
+background-color: #969593;
+max-width: 1280px;
 }
 /*La suma da 100=65+15+20*/
 .logo{
@@ -77,12 +79,80 @@ width: 15%;
 height: 100%;
 float: left;
 }
+
+/*niveles de navegación*/
+/*nivel 0*/
+nav ul{
+list-style: none;/*para quitar viñetas*/
+text-align: right;/*el elemento ul se desplaza a la derecha*/
+}
+nav ul li{
+/*display:inline-block;/*Dejar los elementos de forma horizontal*/
+width: 130px;/*tamaño definido para todas las opciones (los elementos li)*/
+/*se agrega el mismo color a todos los elementos de la
+barra de navegación*/
+background-color: #979692;
+}
+/*Para que los elementos ocultos cuando pase el mouse, muestre
+los elementos ul*/
+nav ul li:hover>ul{
+display: block;
+}
+/*Para que los subítems queden como lo esperado*/
+nav .navegacion>ul>li{
+/*quiere decir que solo las etiquetas que estan directamente relacionadas
+con la clase navegación y solo las li van a tener dichas propuedades*/
+/*Se agrega el display*/
+display:inline-block;
+}
+/*Para que el elemento <li> complete el contenedor*/
+nav .ingreso ul li{
+width: 100%;
+
+}
+nav ul li a{
+display:block; /*para poder colocarle un margin o un padding
+al elemento <a>*/
+text-decoration: none;/*quitar el subrayado del link del anchor <a>*/
+color: #000000;
+padding: 12.7px 2px; /*Recuerde que es arriba(15px)-derecha(2px)-abajo(15)-izquierda(2)*/
+text-align: center;
+border-bottom: 2px solid #fff;/*borde inferior al elemento <a>*/
+}
+/*Recuerde hover es una pseudo-clase
+el proposito es que algo cambie o resalte cuando pase el cursor
+por descendencia el elemento <a> tendrá este efecto*/
+nav ul li a:hover{
+background: rgba(122, 3, 103, 0.671);/*una opacidad mientras el puntero
+pasa sobre la opcion*/
+border-bottom: 2px solid rgb(156, 129, 129);
+}
+/*nivel 1 -primer despliegue*/
+nav li ul{
+position: absolute;/*Los elemento ul
+mantengan la posición*/
+display: none;/*se ocultan los elementos del nivel 1*/
+}
+/*Para las subítems de la opción ingreso*/
+nav .ingreso li ul{
+width: 10%;/*Se coloca un ancho al elemento de la clase ingreso
+que sea acorde a lo que se necesita*/
+}
+nav li ul li{
+position: relative;
+}
+/*nivel 2 -despligues laterales+*/
+nav li ul li ul{
+left: 130px;/*desde la izquierda va a ocupar 130px*/
+top:2px;/*quede un poco abajo*/
+}
+/*encabezado*/
 /*encabezado*/
 header{
 width: 100%;
 height: 550px;
 /*depende del monitor*/
-background-image: url('../img/fondo-header.jpg');
+background-image: url('../img/header.jpg');
 background-size:100% 100%;
 }
 /*portafolio*/
@@ -94,7 +164,7 @@ main#portafolio{/*tiene que estar pegado para que sepa que es de esa etiqueta
 si se separa pensara que es de alguna del interior*/
 width: 100%;
 height: 550px;
-background: rgb(255,255,255,0.9);/*transparencia 0.4*/
+background: rgba(252, 252, 252, 0.9);/*transparencia 0.4*/
 }
 .div-porta{
 width: 33.33%;
@@ -117,6 +187,12 @@ margin: 40px 0px 0px 0px;/*cuando hay 2 medidas afecta primero
 arriba y abajo y la otra es izq y der*/
 /*margin-top: 20px;*/
 text-align: justify;
+}
+.div-arr iframe{
+width: 100%;
+height: 100%;
+/*padding: 30px;/*para el vídeo*/
+border: 0;
 }
 /*quinenes-somos*/
 /*#titulo2{
@@ -155,19 +231,49 @@ height: 550px;
 width: 50%;
 height: 100%;
 float: left;
+flex-shrink: 0;
 }
 .div-arr{
 width: 100%;
 height:70%;
+flex-shrink: 0;
 }
-.div-aba{
-width: 100%;
-height:30%;
+
+.div-aba {
+    width: 100%;
+    min-height: 160px; /* Le da altura para que se vea el color */
+    background-color: rgba(160, 41, 41, 0.9) !important; /* El rojo de tu código */
+    padding: 8px 0;
+    
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.direccion {
+    margin: 2px 0; /* Menos espacio entre líneas de texto */
+    font-size: 14px;
+    color: black;
+    width: 100%; /* Asegura que el texto use todo el ancho para centrarse */
+}
+
+.instagram {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    display: block; /* Ayuda a que se centre mejor */
 }
 /*footer*/
 footer{
 width: 100%;
 height: 50px;
+background-color: #888783;
 }
+/*dirección contacto*/
+
+
+
 
 
