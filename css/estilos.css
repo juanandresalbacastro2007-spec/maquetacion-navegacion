@@ -135,7 +135,7 @@ display: none;/*se ocultan los elementos del nivel 1*/
 }
 /*Para las subítems de la opción ingreso*/
 nav .ingreso li ul{
-width: 10%;/*Se coloca un ancho al elemento de la clase ingreso
+width: 15%;/*Se coloca un ancho al elemento de la clase ingreso
 que sea acorde a lo que se necesita*/
 }
 nav li ul li{

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Parisienne&family=Tangerine:wght@400;700&display=swap');
 *{
 box-sizing: border-box;
 margin: 0;
@@ -244,7 +245,7 @@ width: 50px;
 .foot-izq ul li a{
 display: block;
 
-text-decoration: none;
+text-decoration: none;  
 padding: 13px 5px 11px 5px;
 color: #333;
 }
